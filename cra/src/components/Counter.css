@@ -22,12 +22,12 @@
 #counter button {
   background: none;
   border: none;
-  font-size: 3rem;
+  font-size: 4rem;
   flex: 1;
 }
 
 #counter button:hover {
-  font-size: 3.2rem;
+  font-size: 4.2rem;
   font-weight: bold;
   cursor: pointer;
 }
