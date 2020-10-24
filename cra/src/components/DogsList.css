@@ -1,0 +1,22 @@
+.dogslist-row {
+  align-items: center;
+  display: flex;
+  border-radius: 10px;
+  border: #ddd solid 1px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+}
+
+.dogslist-img {
+  width: 300px;
+  border-radius: 15px;
+}
+
+.dogslist-text {
+  margin: 0 10px;
+}
+
+.dogslist-icon {
+  color: red;
+}
