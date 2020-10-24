@@ -7,19 +7,13 @@ function App() {
     <div className="app">
       <ul>
         <li>
-          <Link to="/counter">
-            Counter 컴포넌트
-          </Link>
+          <Link to="/counter">Counter 컴포넌트</Link>
         </li>
         <li>
-          <Link to="/dogs">
-            API 요청을 통해 데이터 불러오기
-          </Link>
+          <Link to="/dogs">API 요청을 통해 데이터 불러오기</Link>
         </li>
         <li>
-          <Link to="/dogslist">
-            Dogs List
-          </Link>
+          <Link to="/dogslist">Dogs List</Link>
         </li>
       </ul>
     </div>
