@@ -1,11 +1,10 @@
 .dogslist-row {
-  align-items: center;
   display: flex;
-  border-radius: 10px;
+  border-radius: 15px;
   border: #ddd solid 1px;
   justify-content: space-between;
   margin-bottom: 10px;
-  padding: 10px 20px;
+  padding-right: 20px;
 }
 
 .dogslist-img {
@@ -15,8 +14,16 @@
 
 .dogslist-text {
   margin: 0 10px;
+  display: flex;
+  align-items: center;
 }
 
 .dogslist-icon {
   color: red;
+  background: none;
+  border: none;
+}
+
+.dogslist-icon:hover {
+  cursor: pointer;
 }
