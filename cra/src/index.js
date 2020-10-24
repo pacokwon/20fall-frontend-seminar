@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import DogsList from './components/DogsList'
+import Counter from './components/Counter'
 
 // ReactDOM.render(
 //   <App />,
@@ -18,6 +19,9 @@ ReactDOM.render(
       </Route>
       <Route exact path="/dogs">
         <DogsList />
+      </Route>
+      <Route exact path="/counter">
+        <Counter />
       </Route>
     </Switch>
   </BrowserRouter>,
