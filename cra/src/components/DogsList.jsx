@@ -2,6 +2,18 @@ import React, { useEffect, useState } from 'react'
 import { MdFavorite, MdFavoriteBorder } from 'react-icons/md'
 import './DogsList.css'
 
+const DogRow = ({ url, handleLike, isLiked }) => (
+    <div className='dogslist-row'>
+        <img className='dogslist-img' src={url} />
+        <div className='dogslist-text'>
+            Adipisicing aliquid maxime vero fugiat asperiores saepe. Tempora ipsam laboriosam aliquam
+        </div>
+        <button className='dogslist-icon' onClick={handleLike} >
+            {isLiked ? <MdFavorite size={32} /> : <MdFavoriteBorder size={32} />}
+        </button>
+    </div>
+)
+
 const DogsList = () => {
     const breedsList = ['shiba', 'terrier', 'retriever', 'husky', 'chihuahua', 'beagle']
     const [dogs, setDogs] = useState([])
@@ -25,24 +37,13 @@ const DogsList = () => {
         <div id='dogslist-container'>
             <h1 style={{ fontFamily: 'Courier' }}>Liked Dogs: {likes.filter(x => x).length}</h1>
             {breedsList.map(breed =>
-                <button
-                    key={breed}
-                    onClick={() => setBreed(breed)}
-                >
+                <button key={breed} onClick={() => setBreed(breed)}>
                     {breed}
                 </button>
             )}
-            {dogs.map((url, index) => (
-                <div className='dogslist-row' key={url}>
-                    <img className='dogslist-img' src={url} />
-                    <div className='dogslist-text'>
-                        Adipisicing aliquid maxime vero fugiat asperiores saepe. Tempora ipsam laboriosam aliquam
-                    </div>
-                    <button className='dogslist-icon' onClick={handleLike(index)} >
-                        {likes[index] ? <MdFavorite size={32} /> : <MdFavoriteBorder size={32} />}
-                    </button>
-                </div>
-            ))}
+            {dogs.map((url, index) =>
+                <DogRow key={url} url={url} handleLike={handleLike(index)} isLiked={likes[index]} />
+            )}
         </div>
     )
 }
